@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<informationPackage xmlns="http://www.eumetsat.int/sip">
+    <dataSection>
+        <dataObject ID="browse.jpg">
+            <fileType>Browse</fileType>
+            <format>JPEG</format>
+            <size>37834</size>
+            <path>browse.jpg</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa02_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26110400</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa02_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa05_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26767966</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa05_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_geometries.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>2190202</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_geometries.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/removed_pixels.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>17601897</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/removed_pixels.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/time_coordinates.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>15507</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/time_coordinates.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_meteo.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>19343564</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_meteo.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa17_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27377717</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa17_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa03_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26375939</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa03_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa10_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27301574</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa10_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa14_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26152639</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa14_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa04_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27007304</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa04_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa08_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27358929</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa08_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa13_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>25066506</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa13_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/qualityFlags.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>2341848</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/qualityFlags.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa18_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27351109</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa18_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa19_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27160662</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa19_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_geo_coordinates.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>1180158</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/tie_geo_coordinates.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa12_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27510803</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa12_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa20_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26331229</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa20_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa16_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27405493</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa16_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa09_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27075481</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa09_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa01_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>25149798</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa01_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa11_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27367771</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa11_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa07_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>26838543</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa07_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/instrument_data.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>1055179</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/instrument_data.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa15_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27124481</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa15_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/xfdumanifest.xml">
+            <fileType>Data</fileType>
+            <format>XML</format>
+            <size>173783</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/xfdumanifest.xml</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa06_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27173445</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa06_radiance.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/geo_coordinates.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>58763355</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/geo_coordinates.nc</path>
+        </dataObject>
+        <dataObject ID="S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa21_radiance.nc">
+            <fileType>Data</fileType>
+            <format>NetCDF</format>
+            <size>27647630</size>
+            <path>S3B_OL_1_EFR____20220323T152438_20220323T152738_20220324T205531_0179_064_068_2340_MAR_O_NT_002.SEN3/Oa21_radiance.nc</path>
+        </dataObject>
+    </dataSection>
+    <eopmetadataSection>
+        <path>EOPMetadata.xml</path>
+    </eopmetadataSection>
+</informationPackage>

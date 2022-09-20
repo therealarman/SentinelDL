@@ -97,41 +97,45 @@ def Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2,
     
     print("Starting visualization :D")
     
-    files = find_files_and_readers(sensor='olci',
-                               start_time=start_date,
-                               end_time=end_date,
-                               base_dir='./products/S3_20220723_20220723',
-                               reader='olci_l1b')
+    try:    
+        files = find_files_and_readers(sensor='olci',
+                                   start_time=start_date,
+                                   end_time=end_date,
+#                                    base_dir='./products/S3_20220723_20220723',
+                                   base_dir = rpath,
+                                   reader='olci_l1b')
 
-    scn = Scene(filenames=files)
-    scn.load(['true_color'])
+        scn = Scene(filenames=files)
+        scn.load(['true_color'])
 
-    meanWidth = .5*(haversine(lon1, lat1, lon2, lat1)+haversine(lon1, lat2, lon2, lat2))
+        meanWidth = .5*(haversine(lon1, lat1, lon2, lat1)+haversine(lon1, lat2, lon2, lat2))
 
-    height = haversine(lon1, lat1, lon1, lat2)
+        height = haversine(lon1, lat1, lon1, lat2)
 
-    pixWidth = (int(meanWidth) * 1000) / 300
-    pixHeight = (int(height) * 1000) / 300
+        pixWidth = (int(meanWidth) * 1000) / 300
+        pixHeight = (int(height) * 1000) / 300
 
-    print(f"Width: {meanWidth}, Height: {height}")
-    print(f"%Width: {pixWidth}, %Height: {pixHeight}")
+        print(f"Width: {meanWidth}, Height: {height}")
+        print(f"%Width: {pixWidth}, %Height: {pixHeight}")
 
-    my_area = create_area_def('my_area', {'proj': 'lcc', 'lon_0': -91., 'lat_0': 29.5, 'lat_1': 29.5, 'lat_2': 29.5},
-                          width=pixWidth, height=pixHeight,
-                          area_extent=[lon1, lat1, lon2, lat2], units='degrees')
-    new_scn = scn.resample(my_area)
-    #generate RGB from true color
-    rgb = get_enhanced_image(new_scn['true_color'])
-    #extract projection and lon lat from products
-    crs = new_scn['true_color'].attrs['area'].to_cartopy_crs()
+        my_area = create_area_def('my_area', {'proj': 'lcc', 'lon_0': -91., 'lat_0': 29.5, 'lat_1': 29.5, 'lat_2': 29.5},
+                              width=pixWidth, height=pixHeight,
+                              area_extent=[lon1, lat1, lon2, lat2], units='degrees')
+        new_scn = scn.resample(my_area)
+        #generate RGB from true color
+        rgb = get_enhanced_image(new_scn['true_color'])
+        #extract projection and lon lat from products
+        crs = new_scn['true_color'].attrs['area'].to_cartopy_crs()
 
-    fig =  plt.figure(figsize=(6, 4), dpi=400)
-    ax1 = plt.subplot(projection=crs)
-    rgb.data.plot.imshow(rgb='bands', transform=crs, ax=ax1)
-    ax1.set_title('Sentinel3_%s_%s' % (new_scn.start_time.isoformat(), suffix))
-    
-    #save figure
-    fig.savefig('Sentinel3_%s_%s_rgb.png' % (new_scn.start_time.isoformat(), suffix))
+        fig =  plt.figure(figsize=(6, 4), dpi=400)
+        ax1 = plt.subplot(projection=crs)
+        rgb.data.plot.imshow(rgb='bands', transform=crs, ax=ax1)
+        ax1.set_title('Sentinel3_%s_%s' % (new_scn.start_time.isoformat(), suffix))
+
+        #save figure
+        fig.savefig('Sentinel3_%s_%s_rgb.png' % (new_scn.start_time.isoformat(), suffix))
+    except:
+        print(f"Could not generate image for {rpath}")
 
 consumer_key = 'yawsJIqGoAetBf_MqpcByUwnrWMa'
 consumer_secret = 'w6nWuFAtEgPhFESfK7Q4MzOs9t0a'
@@ -140,8 +144,8 @@ datastore = get_datastore(consumer_key, consumer_secret)
 today = datetime.datetime.now()
 yesterday = today - timedelta(days=1)
 
-scn_start = datetime.date(2022,7,23)
-scn_end = datetime.date(2022,7,24)
+# scn_start = datetime.date(2022,7,23)
+# scn_end = datetime.date(2022,7,24)
 
 
 #FL Bay Export
@@ -157,8 +161,49 @@ lat1 = 26
 lon2 = -80
 lat2 = 24
 
-Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/', start_date=scn_start,
-                 end_date=scn_end, suffix = "FlBay")
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,8,30),
+                 end_date=datetime.date(2022,8,31), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,8,31),
+                 end_date=datetime.date(2022,9,1), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,1),
+                 end_date=datetime.date(2022,9,2), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,2),
+                 end_date=datetime.date(2022,9,3), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,3),
+                 end_date=datetime.date(2022,9,4), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,4),
+                 end_date=datetime.date(2022,9,5), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,5),
+                 end_date=datetime.date(2022,9,6), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,6),
+                 end_date=datetime.date(2022,9,7), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,7),
+                 end_date=datetime.date(2022,9,8), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,8),
+                 end_date=datetime.date(2022,9,9), suffix = "FlBay")
+
+Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
+                 start_date=datetime.date(2022,9,9),
+                 end_date=datetime.date(2022,9,10), suffix = "FlBay")
 
 #GOMEX Export
 

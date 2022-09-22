@@ -1,4 +1,5 @@
 *.nc
 *.zip
 *.xml
+*.png
 .ipynb_checkpoints

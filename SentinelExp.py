@@ -162,7 +162,7 @@ for single_date in daterange(loop_start_date, loop_end_date):
     print(single_date.strftime("%Y-%m-%d"))
     prevDate = single_date - timedelta(days=1)
     Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/', start_date=prevDate,
-                     end_date=single_date, suffix = "Gomex")
+                     end_date=single_date, suffix = "FlBay")
 
 #GOMEX Export
 

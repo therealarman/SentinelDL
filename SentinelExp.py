@@ -18,8 +18,6 @@ import numpy as np
 os.chdir('/mnt/beegfs/home/alexisa2019/Projects/SentinelProject')
 print(os.getcwd())
 
-# import sys
-
 def daterange(start_date, end_date):
     for n in range(int((end_date - start_date).days)):
         yield start_date + timedelta(n)
@@ -49,7 +47,6 @@ def haversine(lon1, lat1, lon2, lat2):
 
 def Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2,
                      collectionID='EO:EUM:DAT:0409',
-#                      geojson_file, 
                      opath = './',
                      start_date = None, end_date = None, suffix = None):
     
@@ -75,7 +72,6 @@ def Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2,
     print(f'Found Datasets: {len(products)} datasets for the given time range')
     for product in products:
         with product.open() as fsrc, open(opath+fsrc.name, mode='wb') as fdst:
-#             if os.path.isfile(fdst.name):
             if os.path.getsize(fdst.name)>0:
 
                 print(f'Product {fdst.name} exists.')
@@ -105,7 +101,6 @@ def Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2,
         files = find_files_and_readers(sensor='olci',
                                    start_time=start_date,
                                    end_time=end_date,
-#                                    base_dir='./products/S3_20220723_20220723',
                                    base_dir = rpath,
                                    reader='olci_l1b')
 
@@ -145,69 +140,29 @@ consumer_key = 'yawsJIqGoAetBf_MqpcByUwnrWMa'
 consumer_secret = 'w6nWuFAtEgPhFESfK7Q4MzOs9t0a'
 datastore = get_datastore(consumer_key, consumer_secret)
 
-# today = datetime.datetime.now()
-# yesterday = today - timedelta(days=1)
-
-# scn_start = datetime.date(2022,7,23)
-# scn_end = datetime.date(2022,7,24)
-
+today = datetime.datetime.now()
+yesterday = today - timedelta(days=1)
 
 #FL Bay Export
 
-# roi = [[-81.0955810546875,26.675685969067487],
-#        [-80.54489135742188,26.675685969067487],
-#        [-80.54489135742188,27.243641579169292],
-#        [-81.0955810546875,27.243641579169292],
-#        [-81.0955810546875,26.675685969067487]]
+roi = [[-81.0955810546875,26.675685969067487],
+       [-80.54489135742188,26.675685969067487],
+       [-80.54489135742188,27.243641579169292],
+       [-81.0955810546875,27.243641579169292],
+       [-81.0955810546875,26.675685969067487]]
 
-# lon1 = -82
-# lat1 = 26
-# lon2 = -80
-# lat2 = 24
+lon1 = -82
+lat1 = 26
+lon2 = -80
+lat2 = 24
 
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,8,30),
-#                  end_date=datetime.date(2022,8,31), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,8,31),
-#                  end_date=datetime.date(2022,9,1), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,1),
-#                  end_date=datetime.date(2022,9,2), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,2),
-#                  end_date=datetime.date(2022,9,3), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,3),
-#                  end_date=datetime.date(2022,9,4), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,4),
-#                  end_date=datetime.date(2022,9,5), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,5),
-#                  end_date=datetime.date(2022,9,6), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,6),
-#                  end_date=datetime.date(2022,9,7), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,7),
-#                  end_date=datetime.date(2022,9,8), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,8),
-#                  end_date=datetime.date(2022,9,9), suffix = "FlBay")
-
-# Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/',
-#                  start_date=datetime.date(2022,9,9),
-#                  end_date=datetime.date(2022,9,10), suffix = "FlBay")
+loop_start_date = datetime.date(2022, 8, 31)
+loop_end_date = datetime.date(2022, 9, 10)
+for single_date in daterange(loop_start_date, loop_end_date):
+    print(single_date.strftime("%Y-%m-%d"))
+    prevDate = single_date - timedelta(days=1)
+    Sentinel_request(datastore, roi, lon1, lon2, lat1, lat2, opath='./products/', start_date=prevDate,
+                     end_date=single_date, suffix = "Gomex")
 
 #GOMEX Export
 
